@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html ng-app="calculatorApp">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Calculator</title>
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+        <script src="angular/calculator.js"></script>
+    </head>
+
+    <body ng-controller="calculatorCtrl">
+        <div class="row">
+            <div class="col-sm-8 col-md-8">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h1>Calculator</h1>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-offset-1 col-md-3">
+                                        <label for="num1"><strong>Number1</strong></label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <input type="text" class="form-control" ng-model="number1" name="num1" placeholder="Input Value"/>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-offset-1 col-md-3">
+                                        <label for="num2"><strong>Number2</strong></label>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <input type="text" class="form-control" ng-model="number2" name="num2" placeholder="Input Value" />
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-offset-4 col-md-5">
+                                        <textarea class="form-control" rows="1" ng-bind="output" readonly="readonly"></textarea>
+                                        <!--<label>{{output}}</label>-->
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="row">
+                                    <div class="col-md-offset-1 col-md-2">
+                                        <button type="submit" ng-click="add();" class="btn btn-primary" style="width: 8em" onclick="return false;">Add</button>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" ng-click="subtract();" class="btn btn-primary" style="width: 8em" onclick="return false;">Subtract</button>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" ng-click="multiply();" class="btn btn-primary" style="width: 8em" onclick="return false;">Multiply</button>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" ng-click="divide();" class="btn btn-primary" style="width: 8em" onclick="return false;">Divide</button>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
